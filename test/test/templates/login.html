@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block head %}
+{{ super() }}
+<title>登录</title>
+{% endblock %}
+
+{% block content %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+<form method="POST" class="login-form">
+    {{ form.hidden_tag() }}
+    {{ wtf.form_field(form.email, class="form-control user-icon") }}
+    {{ wtf.form_field(form.password) }}
+    {{ wtf.form_field(form.submit) }}
+</form>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block head%}
+
+{{ super() }}
+<style>
+body {
+    background: #82c458;
+}
+
+</style>
+{% endblock %}
+
+{% block page_content %}
+<div class="text-center">
+    <div class="wrapper2">
+
+        <br><br>
+        {{ wtf.quick_form(form) }}
+        
+        <a href="/get_file_list">查询历史数据</a>
+
+        <hr>
+    </div>
+</div>
+{% endblock %}

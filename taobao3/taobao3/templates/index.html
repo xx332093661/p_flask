@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}上传文件{% endblock %}
+{% block head %}
+{{ super() }}
+<style>
+body {
+    background: #82c458;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="text-center">
+    <div class="warpper">
+
+        <br><br>
+        {% if show_msg %}
+            采集数据需要一定时间，请稍后查看
+        {% else %}
+
+            {% import "bootstrap/wtf.html" as wtf %}
+            {{ wtf.quick_form(form) }}
+
+        {% endif %}
+
+        <!--<a href="/get_datas">查询历史数据</a>-->
+        <a href="/get_file_list">查询历史数据</a>
+
+        <hr>
+    </div>
+</div>
+
+
+{% endblock %}

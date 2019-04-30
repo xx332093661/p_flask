@@ -1,0 +1,215 @@
+127.0.0.1 - - [26/Feb/2018 11:25:14] "GET / HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\werkzeug\serving.py", line 193, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python27\lib\site-packages\werkzeug\serving.py", line 181, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1993, in wsgi_app
+    ctx.auto_pop(error)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 387, in auto_pop
+    self.pop(exc)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 376, in pop
+    app_ctx.pop(exc)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 189, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1892, in do_teardown_appcontext
+    func(exc)
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 805, in shutdown_session
+    self.session.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\_collections.py", line 1001, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2939, in __call__
+    return self.class_(**local_kw)
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 143, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 877, in engine
+    return self.get_engine()
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 896, in get_engine
+    return connector.get_engine()
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 559, in get_engine
+    self._engine = rv = sqlalchemy.create_engine(info, **options)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\__init__.py", line 424, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\strategies.py", line 81, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "C:\Python27\lib\site-packages\sqlalchemy\dialects\mysql\mysqldb.py", line 102, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+127.0.0.1 - - [26/Feb/2018 11:25:14] "GET /favicon.ico HTTP/1.1" 500 -
+127.0.0.1 - - [26/Feb/2018 11:25:44] "GET / HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\werkzeug\serving.py", line 193, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python27\lib\site-packages\werkzeug\serving.py", line 181, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1993, in wsgi_app
+    ctx.auto_pop(error)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 387, in auto_pop
+    self.pop(exc)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 376, in pop
+    app_ctx.pop(exc)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 189, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1892, in do_teardown_appcontext
+    func(exc)
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 805, in shutdown_session
+    self.session.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\_collections.py", line 1001, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2939, in __call__
+    return self.class_(**local_kw)
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 143, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 877, in engine
+    return self.get_engine()
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 896, in get_engine
+    return connector.get_engine()
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 559, in get_engine
+    self._engine = rv = sqlalchemy.create_engine(info, **options)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\__init__.py", line 424, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\strategies.py", line 81, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "C:\Python27\lib\site-packages\sqlalchemy\dialects\mysql\mysqldb.py", line 102, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+127.0.0.1 - - [26/Feb/2018 11:25:44] "GET /favicon.ico HTTP/1.1" 500 -
+127.0.0.1 - - [26/Feb/2018 11:25:45] "GET / HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\werkzeug\serving.py", line 193, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python27\lib\site-packages\werkzeug\serving.py", line 181, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1993, in wsgi_app
+    ctx.auto_pop(error)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 387, in auto_pop
+    self.pop(exc)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 376, in pop
+    app_ctx.pop(exc)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 189, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1892, in do_teardown_appcontext
+    func(exc)
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 805, in shutdown_session
+    self.session.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\_collections.py", line 1001, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2939, in __call__
+    return self.class_(**local_kw)
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 143, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 877, in engine
+    return self.get_engine()
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 896, in get_engine
+    return connector.get_engine()
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 559, in get_engine
+    self._engine = rv = sqlalchemy.create_engine(info, **options)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\__init__.py", line 424, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\strategies.py", line 81, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "C:\Python27\lib\site-packages\sqlalchemy\dialects\mysql\mysqldb.py", line 102, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+127.0.0.1 - - [26/Feb/2018 11:25:45] "GET /favicon.ico HTTP/1.1" 500 -
+127.0.0.1 - - [26/Feb/2018 11:25:46] "GET / HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\werkzeug\serving.py", line 193, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python27\lib\site-packages\werkzeug\serving.py", line 181, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1993, in wsgi_app
+    ctx.auto_pop(error)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 387, in auto_pop
+    self.pop(exc)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 376, in pop
+    app_ctx.pop(exc)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 189, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1892, in do_teardown_appcontext
+    func(exc)
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 805, in shutdown_session
+    self.session.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\_collections.py", line 1001, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2939, in __call__
+    return self.class_(**local_kw)
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 143, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 877, in engine
+    return self.get_engine()
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 896, in get_engine
+    return connector.get_engine()
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 559, in get_engine
+    self._engine = rv = sqlalchemy.create_engine(info, **options)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\__init__.py", line 424, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\strategies.py", line 81, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "C:\Python27\lib\site-packages\sqlalchemy\dialects\mysql\mysqldb.py", line 102, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+127.0.0.1 - - [26/Feb/2018 11:25:46] "GET /favicon.ico HTTP/1.1" 500 -
+127.0.0.1 - - [26/Feb/2018 11:25:47] "GET / HTTP/1.1" 500 -
+Error on request:
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\werkzeug\serving.py", line 193, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python27\lib\site-packages\werkzeug\serving.py", line 181, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1997, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1993, in wsgi_app
+    ctx.auto_pop(error)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 387, in auto_pop
+    self.pop(exc)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 376, in pop
+    app_ctx.pop(exc)
+  File "C:\Python27\lib\site-packages\flask\ctx.py", line 189, in pop
+    self.app.do_teardown_appcontext(exc)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1892, in do_teardown_appcontext
+    func(exc)
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 805, in shutdown_session
+    self.session.commit()
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\_collections.py", line 1001, in __call__
+    return self.registry.setdefault(key, self.createfunc())
+  File "C:\Python27\lib\site-packages\sqlalchemy\orm\session.py", line 2939, in __call__
+    return self.class_(**local_kw)
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 143, in __init__
+    bind = options.pop('bind', None) or db.engine
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 877, in engine
+    return self.get_engine()
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 896, in get_engine
+    return connector.get_engine()
+  File "C:\Python27\lib\site-packages\flask_sqlalchemy\__init__.py", line 559, in get_engine
+    self._engine = rv = sqlalchemy.create_engine(info, **options)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\__init__.py", line 424, in create_engine
+    return strategy.create(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\strategies.py", line 81, in create
+    dbapi = dialect_cls.dbapi(**dbapi_args)
+  File "C:\Python27\lib\site-packages\sqlalchemy\dialects\mysql\mysqldb.py", line 102, in dbapi
+    return __import__('MySQLdb')
+ImportError: No module named MySQLdb
+127.0.0.1 - - [26/Feb/2018 11:25:47] "GET /favicon.ico HTTP/1.1" 500 -

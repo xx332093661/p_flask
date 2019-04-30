@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}翻相册 - 设置{% endblock %}
+{% block page_content %}
+<div class="page-header">
+    <h1>设置</h1>
+</div>
+
+<ol class="breadcrumb" id="navigation">
+    <li><a href="{{ url_for('.index') }}">首页</a></li>
+    <li class="active">设置</li>
+    <li class="pull-right"><a href="{{ url_for('.albums', username=current_user.username) }}">返回我的相册</a></li>
+</ol>
+
+<div class="col-md-6 container">
+    <form class="form form-horizontal" method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {{ wtf.form_field(form.name, class="form-control user-icon") }}
+        {{ wtf.form_field(form.status) }}
+        {{ wtf.form_field(form.location) }}
+        {{ wtf.form_field(form.website) }}
+        {{ wtf.form_field(form.about_me) }}
+        <br>
+        {% if user.like_public %}
+        {{ wtf.form_field(form.like_public, checked) }}
+        {% else %}
+        {{ wtf.form_field(form.like_public) }}
+        {% endif %}
+        <hr>
+        {{ wtf.form_field(form.submit) }}
+    </form>
+</div>
+{% endblock %}

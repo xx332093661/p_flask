@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}历史数据{% endblock %}
+{% block content %}
+<p>
+    {% if datas %}
+    <form action="{{ url_for('export_excel') }}" method="POST">
+        <input name="kwds" type="text" style="display: none" value="{{datas[0].product_file_id}}" />
+
+        <input class="btn btn-success" type="submit" name="submit" value="导出数据">
+    </form>
+    {% endif %}
+
+
+<table class="table table-hover">
+    <tr>
+        <td>nid</td>
+        <td>category</td>
+        <td>title</td>
+        <td>view_price</td>
+        <td>item_loc</td>
+        <td>view_sales</td>
+        <td>nick</td>
+    </tr>
+    {% for data in datas %}
+    <tr>
+        <td>{{data.nid}}</td>
+        <td>{{data.category}}</td>
+        <td>{{data.title}}</td>
+        <td>{{data.view_price}}</td>
+        <td>{{data.item_loc}}</td>
+        <td>{{data.view_sales}}</td>
+        <td>{{data.nick}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+
+<!--{% if file_url %}-->
+<!--<br><img src="{{ file_url }}">-->
+<!--{% endif %}-->

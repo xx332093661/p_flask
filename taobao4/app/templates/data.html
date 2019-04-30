@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}历史数据{% endblock %}
+{% block page_content %}
+<p>
+    {% if datas %}
+    <form action="{{ url_for('main.export_excel') }}" method="POST">
+        <input name="kwds" type="text" style="display: none" value="{{datas[0].product_file_id}}" />
+
+        <input class="btn btn-success" type="submit" name="submit" value="导出数据">
+    </form>
+    {% endif %}
+
+
+<table class="table table-hover">
+    <tr>
+        <td>关键字</td>
+        <td>产品名称</td>
+        <td>店铺</td>
+        <td>地址</td>
+        <td>包装数量</td>
+        <td>价格</td>
+        <td>单价</td>
+        <td>销售量</td>
+        <td>来源</td>
+    </tr>
+    {% for data in datas %}
+    <tr>
+        <td>{{data.key_word}}</td>
+        <td>{{data.product_name}}</td>
+        <td>{{data.nick}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.package_num}}</td>
+        <td>{{data.price}}</td>
+        <td>{{data.unit_price}}</td>
+        <td>{{data.sales}}</td>
+        <td>{{data.origin}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+
+<!--{% if file_url %}-->
+<!--<br><img src="{{ file_url }}">-->
+<!--{% endif %}-->
