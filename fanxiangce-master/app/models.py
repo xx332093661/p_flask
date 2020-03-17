@@ -19,6 +19,7 @@ class Permission:
     ADMINISTER = 0x80
 
 
+
 class Role(db.Model):
     __tablename__ = 'roles'
     id = db.Column(db.Integer, primary_key=True)
